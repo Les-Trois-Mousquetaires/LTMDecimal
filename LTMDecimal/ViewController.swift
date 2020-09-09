@@ -8,15 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.view.backgroundColor = .white
-        
-        
-//        let regular = "^[1-9]\\d*\\.\\d*|0\\.\\d*[1-9]\\d*$"
+        self.view.addSubview(self.textview)
+    }
+    
+    func regular() {
+        //        let regular = "^[1-9]\\d*\\.\\d*|0\\.\\d*[1-9]\\d*$"
         
         let regular = "^[0-9]\\d*|.$"
         let predicate = NSPredicate(format: "SELF MATCHES %@", regular)
@@ -52,17 +54,17 @@ class ViewController: UIViewController {
         }else{
             print("不通过")
         }
-
-        self.view.addSubview(self.textview)
-        
-        
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return self.textview.customTextChange(textField, Range: range, replacementString: string)
     }
 
     lazy var textview: LTMDecimalTextField = {
         let text = LTMDecimalTextField()
         text.frame = CGRect.init(x: 10, y: 200, width: 300, height: 40)
         text.backgroundColor = .yellow
-//        text.keyboardType = .decimalPad
+        text.delegate = self
         
         return text
     }()

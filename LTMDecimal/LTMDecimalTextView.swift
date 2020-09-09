@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LTMDecimalTextView: UITextView, UITextViewDelegate {
+public class LTMDecimalTextView: UITextView, UITextViewDelegate {
 
     private var decimalLimited: Int = 2
     /// 小数位数
@@ -32,14 +32,13 @@ class LTMDecimalTextView: UITextView, UITextViewDelegate {
 
     override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
-        self.delegate = self
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+    func customTextChange(_ textView: UITextView, Range range: NSRange, replacementText text: String) -> Bool {
         if textView.text == "" && text == "."{
             return false
         }
