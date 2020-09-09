@@ -40,6 +40,10 @@ class LTMDecimalTextView: UITextView, UITextViewDelegate {
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if textView.text == "" && text == "."{
+            return false
+        }
+        
         let futureString: NSMutableString = NSMutableString(string: textView.text!)
          futureString.insert(text, at: range.location)
          

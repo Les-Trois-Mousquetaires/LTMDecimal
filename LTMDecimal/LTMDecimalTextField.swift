@@ -40,6 +40,10 @@ class LTMDecimalTextField: UITextField, UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField.text! == "" && string == "."{
+            return false
+        }
+        
         let futureString: NSMutableString = NSMutableString(string: textField.text!)
          futureString.insert(string, at: range.location)
          var flag = 0;
