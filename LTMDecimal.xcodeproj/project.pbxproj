@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		273A861625086D6B004EF043 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273A861525086D6B004EF043 /* AppDelegate.swift */; };
-		273A861825086D6B004EF043 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273A861725086D6B004EF043 /* SceneDelegate.swift */; };
 		273A861A25086D6B004EF043 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273A861925086D6B004EF043 /* ViewController.swift */; };
 		273A861D25086D6B004EF043 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 273A861B25086D6B004EF043 /* Main.storyboard */; };
 		273A861F25086D71004EF043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 273A861E25086D71004EF043 /* Assets.xcassets */; };
@@ -20,7 +19,6 @@
 /* Begin PBXFileReference section */
 		273A861225086D6B004EF043 /* LTMDecimal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LTMDecimal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		273A861525086D6B004EF043 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		273A861725086D6B004EF043 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		273A861925086D6B004EF043 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		273A861C25086D6B004EF043 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		273A861E25086D71004EF043 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,7 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				273A861525086D6B004EF043 /* AppDelegate.swift */,
-				273A861725086D6B004EF043 /* SceneDelegate.swift */,
 				273A861925086D6B004EF043 /* ViewController.swift */,
 				273A862925086D96004EF043 /* LTMDecimalTextField.swift */,
 				273A862B25086DAD004EF043 /* LTMDecimalTextView.swift */,
@@ -148,7 +145,6 @@
 				273A862A25086D96004EF043 /* LTMDecimalTextField.swift in Sources */,
 				273A862C25086DAD004EF043 /* LTMDecimalTextView.swift in Sources */,
 				273A861625086D6B004EF043 /* AppDelegate.swift in Sources */,
-				273A861825086D6B004EF043 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

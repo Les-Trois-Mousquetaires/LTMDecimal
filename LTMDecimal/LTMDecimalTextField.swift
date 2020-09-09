@@ -58,14 +58,15 @@ class LTMDecimalTextField: UITextField, UITextFieldDelegate {
          }
 
         /// 限制大小
-        var dealString = textField.text ?? "" + string
+        var dealString = textField.text! + string
         if range.length == 0 {
+
         }else if range.length == 1{
             dealString.removeSubrange(Range.init(range, in: dealString)!)
         }
         let result = Double(dealString) ?? 0
         
-        if text == "." && ((textField.text?.contains(".")) != nil){
+        if string == "." && (textField.text!.contains(".")){
             return false
         }
         return (result <= maxNumLimited)
